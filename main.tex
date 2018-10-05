@@ -1,14 +1,131 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 
-\title{PhD Thesis project}
-\author{Witold Bołt}
-\date{October 2018}
+\documentclass{Dissertate}
+
+\usepackage{amsthm,bm,mathrsfs}
+
+%\usepackage{amsmath,amsfonts}
+%\usepackage{amssymb,mathrsfs,amsthm}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{array,multirow}
+\usepackage[export]{adjustbox} 
+\usepackage{enumerate}
+%\usepackage{cite}
+
+\usepackage[lined,ruled,linesnumbered,noend]{algorithm2e}
+\usepackage{lettrine}
+
+
+\renewcommand{\LettrineFontHook}{\lettrinefont}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\fit}{fit}
+\DeclareMathOperator{\bin}{bin}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\avg}{avg}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\dist}{dis}
+
+
+
+\DeclareMathOperator{\com}{com}
+\DeclareMathOperator{\val}{val}
+
+\DeclareMathOperator{\Img}{Img}
+\DeclareMathOperator{\rules}{\mathcal{R}}
+
+\SetKwFunction{calculateFitness}{fitness}
+\SetKwFunction{selectParents}{parents}
+\SetKwFunction{cross}{cross}
+\SetKwFunction{mutate}{mutate}
+\SetKwFunction{randInt}{randInt}
+\SetKwFunction{rand}{rand}
+\SetKwFunction{ForderIndex}{orderIdx}
+\SetKwFunction{radius}{radius}
+\SetKwFunction{scaleToRadius}{scaleToRadius}
+\SetKwFunction{len}{len}
+\SetKwFunction{fmin}{min}
+\SetKwFunction{fmax}{max}
+\SetKwFunction{Fsum}{sum}
+\SetKwFunction{Fbuildset}{buildSubSet}
+\SetKwFunction{Ferrorvec}{errorVector}
+\SetKwFunction{Fcopyelite}{copyElite}
+\SetKwFunction{Fbest}{stats}
+
+\SetKwFunction{Fstop}{stop}
+\SetKwProg{Fn}{function}{:}{end}
+
+
+\newtheorem{fact}{Fact}[chapter]
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{example}{Example}[chapter]
+
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\def\mean#1{\left< #1 \right>}
+
+\newenvironment{verticalhack}
+  {\begin{array}[b]{@{}c@{}}\displaystyle}
+  {\\\noalign{\hrule height0pt}\end{array}}
+
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+
 
 \begin{document}
 
+% the front matter
+\input{frontmatter/personalize}
 \maketitle
+\copyrightpage
 
-\section{Introduction}
+\setstretch{1.2}
+\abstractpage
+\tableofcontents
+%\authorlist
+%\listoffigures
+\dedicationpage
+\acknowledgments
+
+\onehalfspacing
+
+% include each chapter...
+\setcounter{chapter}{-1}  % start chapter numbering at 0
+\include{chapters/introduction}
+
+\include{chapters/chapter1} % preliminaries
+%\include{chapters/chapter2} % dct
+\include{chapters/chapter3} % ga-identify
+\include{chapters/chapter3b} % ga-identify
+%\include{chapters/chapter4} % de-cca
+%\include{chapters/chapter5} % sca-decomp
+\include{chapters/chapter6} % alpha-aca identify
+
+
+
+%\include{chapters/conclusion}
+%\begin{appendices}
+%    \include{chapters/appendixA}
+%\end{appendices}
+
+\setstretch{1.2}
+
+% the back matter
+\clearpage
+\bibliographystyle{apalike2}
+\bibliography{identify,identify2}
+\addcontentsline{toc}{chapter}{References}
+
+%\include{endmatter/colophon}
 
 \end{document}
