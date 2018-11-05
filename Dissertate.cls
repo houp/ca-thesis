@@ -26,11 +26,9 @@
 \RequirePackage{color}
 \usepackage{hyperref}
 \RequirePackage{url}
-\usepackage{amssymb,mathtools}
-\usepackage{amsmath,amsfonts}
+\usepackage{amsmath,amssymb,mathtools,amsfonts}
+
 %\usepackage{mathspec}
-
-
 % \setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{Palatino}
 % \setmathrm{EB Garamond}
 % \widowpenalty=300

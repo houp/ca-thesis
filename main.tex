@@ -1,5 +1,14 @@
 %!TEX encoding = UTF-8 Unicode
+% chktex-file 46
+% chktex-file 36
+% chktex-file 44
+% chktex-file 40
+% chktex-file 8 
+ 
+\pdfminorversion=7
 \documentclass{Dissertate}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true]{microtype}
+\usepackage[T1]{fontenc}
 
 \usepackage{amsthm,bm,mathrsfs} 
  
@@ -11,7 +20,6 @@
 
 \usepackage[lined,ruled,linesnumbered,noend]{algorithm2e}
 
-
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\fit}{fit}
 \DeclareMathOperator{\bin}{bin}
@@ -19,8 +27,6 @@
 \DeclareMathOperator{\avg}{avg}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\dist}{dis}
-
-
 
 \DeclareMathOperator{\com}{com}
 \DeclareMathOperator{\val}{val}
@@ -49,7 +55,6 @@
 \SetKwFunction{Fstop}{stop}
 \SetKwProg{Fn}{function}{:}{end}
 
-
 \newtheorem{fact}{Fact}[chapter]
 \newtheorem{thm}{Theorem}[chapter]
 \newtheorem{prop}{Proposition}[chapter]
@@ -57,7 +62,6 @@
 
 \theoremstyle{remark}
 \newtheorem{example}{Example}[chapter]
-
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
