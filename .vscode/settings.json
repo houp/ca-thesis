@@ -1,0 +1,16 @@
+{
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-xelatex",
+                "%DOC%"
+            ]
+        }
+    ],
+}

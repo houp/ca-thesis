@@ -3,22 +3,16 @@
 
 \documentclass{Dissertate}
 
-\usepackage{amsthm,bm,mathrsfs}
-
-%\usepackage{amsmath,amsfonts}
-%\usepackage{amssymb,mathrsfs,amsthm}
+\usepackage{amsthm,bm,mathrsfs} 
+ 
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{array,multirow}
 \usepackage[export]{adjustbox} 
 \usepackage{enumerate}
-%\usepackage{cite}
 
 \usepackage[lined,ruled,linesnumbered,noend]{algorithm2e}
-\usepackage{lettrine}
 
-
-\renewcommand{\LettrineFontHook}{\lettrinefont}
 
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\fit}{fit}
@@ -72,22 +66,19 @@
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \def\mean#1{\left< #1 \right>}
-
+ 
 \newenvironment{verticalhack}
   {\begin{array}[b]{@{}c@{}}\displaystyle}
   {\\\noalign{\hrule height0pt}\end{array}}
-
+ 
 \makeatletter
 \newcommand{\removelatexerror}{\let\@latex@error\@gobble}
 \makeatother
 
-
 \begin{document}
-
-% the front matter
+ 
 \input{frontmatter/personalize}
 \maketitle
-\copyrightpage
 
 \setstretch{1.2}
 \abstractpage
@@ -104,16 +95,15 @@
 \include{chapters/introduction}
 
 \include{chapters/chapter1} % preliminaries
-%\include{chapters/chapter2} % dct
+\include{chapters/chapter2} % dct
 \include{chapters/chapter3} % ga-identify
 \include{chapters/chapter3b} % ga-identify
-%\include{chapters/chapter4} % de-cca
-%\include{chapters/chapter5} % sca-decomp
+\include{chapters/chapter4} % de-cca
+\include{chapters/chapter5} % sca-decomp
 \include{chapters/chapter6} % alpha-aca identify
 
+\include{chapters/conclusion}
 
-
-%\include{chapters/conclusion}
 %\begin{appendices}
 %    \include{chapters/appendixA}
 %\end{appendices}

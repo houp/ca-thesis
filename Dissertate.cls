@@ -15,12 +15,10 @@
 
 % Text layout.
 \RequirePackage[width=5.75in, a4paper]{geometry}
-\usepackage{ragged2e}
-%\RaggedRight
+
 \RequirePackage{graphicx}
 
 \parindent 12pt
-\RequirePackage{lettrine}
 \RequirePackage{setspace}
 \RequirePackage{verbatim}
 
@@ -31,23 +29,29 @@
 \usepackage{amssymb,mathtools}
 \usepackage{amsmath,amsfonts}
 \usepackage{mathspec}
-\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{Palatino}
-\setmathrm{EB Garamond}
-\widowpenalty=300
-\clubpenalty=300
-\setromanfont[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{Palatino}
-\newfontfamily{\chapterfont}[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{Palatino}
-\newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{Palatino}
-\newfontfamily\lettrinefont[Path=fonts/initials/]{Initials TFB}
-\setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
-\setmonofont[Scale=MatchLowercase]{Source Code Pro}
+
+
+% \setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{Palatino}
+% \setmathrm{EB Garamond}
+% \widowpenalty=300
+% \clubpenalty=300
+% \setromanfont[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{Palatino}
+% \newfontfamily{\chapterfont}[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{Palatino}
+% \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{Palatino}
+% \newfontfamily\lettrinefont[Path=fonts/initials/]{Initials TFB}
+
+% \setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
+% \setmonofont[Scale=MatchLowercase]{Source Code Pro}
+
+
 \RequirePackage[labelfont={bf,sf,footnotesize,singlespacing},
                 textfont={sf,footnotesize,singlespacing},
                 justification={justified,RaggedRight},
                 singlelinecheck=false,
                 margin=0pt,
                 figurewithin=chapter,
-                tablewithin=chapter]{caption}
+				tablewithin=chapter]{caption}
+				
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 
@@ -131,7 +135,7 @@
 
 % School color found from university's graphic identity site:
 % http://isites.harvard.edu/icb/icb.do?keyword=k75408&pageid=icb.page392732
-\definecolor{SchoolColor}{rgb}{0.6471, 0.1098, 0.1882} % Crimson
+\definecolor{SchoolColor}{rgb}{0,0,0} % Crimson
 \definecolor{chaptergrey}{rgb}{0, 0, 0} % for chapter numbers
 
 \hypersetup{
@@ -147,7 +151,7 @@
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
 	\maketitle
-	\copyrightpage
+	%\copyrightpage
 	\abstractpage
 	\tableofcontents
 	% \listoffigures % optional
@@ -160,7 +164,7 @@
 	\vspace*{\fill}
 	\vspace{100pt}
 	\begin{center}
-	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
+	\Huge {\thetitle} \normalsize \\
 	\vspace{100pt}
 	\textsc{a dissertation presented \\ by\\
 	\theauthor\\% to\\ The Department of \@department\\
@@ -178,8 +182,8 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2015\hspace{3pt}-- \theauthor \\
-	\noindent all rights reserved.
+	\scshape \noindent \small \copyright \small 2019\hspace{3pt}-- \theauthor \\
+	\noindent All rights reserved.
 	\vspace*{\fill}
 	\newpage
 	\rm
@@ -194,7 +198,7 @@
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
-	\Large \textcolor{SchoolColor}{\@title} \normalsize \\
+	\Large {\@title} \normalsize \\
 	\vspace*{20pt}
 	\scshape Abstract \\ \rm
 	\end{center}
