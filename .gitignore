@@ -7,4 +7,6 @@
 *.fls
 main.pdf
 *.fdb_latexmk
-
+main.bbl
+main.blg
+main.xdv

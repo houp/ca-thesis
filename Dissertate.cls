@@ -28,7 +28,7 @@
 \RequirePackage{url}
 \usepackage{amssymb,mathtools}
 \usepackage{amsmath,amsfonts}
-\usepackage{mathspec}
+%\usepackage{mathspec}
 
 
 % \setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{Palatino}
